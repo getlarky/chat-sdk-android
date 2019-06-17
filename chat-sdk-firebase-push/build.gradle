@@ -37,6 +37,7 @@ dependencies {
     implementation "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
     implementation "com.google.firebase:firebase-functions:$firebaseFunctionsVersion"
     implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    implementation "com.github.getlarky:nudge-android:1.1.0"
 }
 
 ext {

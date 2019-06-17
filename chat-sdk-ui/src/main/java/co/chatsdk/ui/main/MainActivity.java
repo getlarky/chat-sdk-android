@@ -13,6 +13,8 @@ import co.chatsdk.core.dao.Keys;
 import co.chatsdk.core.events.EventType;
 import co.chatsdk.core.events.NetworkEvent;
 import co.chatsdk.core.session.ChatSDK;
+import com.larky.nudge.Nudge;
+import android.util.Log;
 
 
 public abstract class MainActivity extends BaseActivity {
@@ -20,6 +22,10 @@ public abstract class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Nudge myNudge = new Nudge(getApplicationContext(), this, "k_1fmsEYpDkXzLUc12xzkw");
+        myNudge.init();
+        Log.d("Nudge", "Shared preferences: \n" + myNudge.printSharedPrefs());
+
 
         if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
             // Activity was brought to front and not created,
